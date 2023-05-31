@@ -1,4 +1,4 @@
-package org.selenium.javascriptexecutor;
+package org.learn.selenium.javascriptexecutor;
 
 import org.openqa.selenium.JavascriptExecutor;
 

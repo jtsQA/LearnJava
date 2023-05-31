@@ -1,4 +1,4 @@
-package org.selenium.javascriptexecutor;
+package org.learn.selenium.javascriptexecutor;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.tasks.ExecutionFunctions;
-import org.tasks.WindowShift;
 
 import java.time.Duration;
 
