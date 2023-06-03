@@ -12,7 +12,7 @@ public class RepeatingNumbersCount {
 //        Arrays.sort(array);
 
         // Sort the array using for loops
-        int temp = 0;   // Variable to store the temp value
+        int temp;   // Variable to store the temp value
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] > array[j]) {

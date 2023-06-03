@@ -12,7 +12,7 @@ public class PrimeNumberWithParallelStream {
         long count = Stream.iterate(0, n -> n + 1)
                 .limit(500000)
                 .parallel() //comment this line for sequential execution
-                .filter(PrimeNumberWithParallelStream::isPrime)
+                .filter(PrimeNumberWithParallelStream::isPrimeWithStream)
                 .peek(System.out::println)
                 .count();
 
@@ -26,7 +26,35 @@ public class PrimeNumberWithParallelStream {
         */
     }
 
-    public static boolean isPrime(int n) {
+    public static boolean isPrimeWithStream(int n) {
         return (n > 1 && IntStream.rangeClosed(2, n / 2).noneMatch(x -> n % x == 0));
+    }
+
+    public static boolean isPrimeOptimised(int n) {
+
+        if (n <= 1) return false;
+
+        if (n <= 3) return true;
+
+        if (n % 2 == 0 || n % 3 == 0) return false;
+
+        for (int i = 5; i * i <= n; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0) return false;
+        }
+
+        return true;
+    }
+
+    public static boolean isPrime(int n) {
+
+        // Corner case
+        if (n <= 1) return false;
+
+        // Check from 2 to n-1
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) return false;
+        }
+
+        return true;
     }
 }
