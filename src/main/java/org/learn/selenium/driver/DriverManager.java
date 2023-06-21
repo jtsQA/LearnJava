@@ -5,12 +5,24 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
 public class DriverManager {
 
     private static WebDriver driver;
+
+    public static WebDriver initializeBrowser(String browser) {
+        return switch (browser) {
+            case "chrome" -> chromeBrowser();
+            case "safari" -> safariBrowser();
+            case "edge" -> edgeBrowser();
+            case "firefox" -> fifrefoxBrowser();
+            default -> chromeBrowserHeadless();
+        };
+    }
 
     public static WebDriver chromeBrowserHeadless() {
 
@@ -32,7 +44,7 @@ public class DriverManager {
         // Set path to chromedriver executable
         WebDriverManager.chromedriver().setup();
 
-        // Create ChromeDriver instance with headless options
+        // Create ChromeDriver instance
         driver = new ChromeDriver();
 
         return driver;
@@ -73,4 +85,25 @@ public class DriverManager {
         return driver;
     }
 
+    public static WebDriver edgeBrowser() {
+
+        // Set path to edgedriver executable
+        WebDriverManager.edgedriver().setup();
+
+        // Create EdgeDriver instance
+        driver = new EdgeDriver();
+
+        return driver;
+    }
+
+    public static WebDriver fifrefoxBrowser() {
+
+        // Set path to firefoxdriver executable
+        WebDriverManager.firefoxdriver().setup();
+
+        // Create FirefoxDriver instance
+        driver = new FirefoxDriver();
+
+        return driver;
+    }
 }

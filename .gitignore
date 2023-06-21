@@ -37,3 +37,6 @@ build/
 ### Mac OS ###
 .DS_Store
 
+### Project Files ###
+/src/main/java/org/config/config.properties
+/src/main/java/ignore/

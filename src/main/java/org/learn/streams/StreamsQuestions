@@ -1,0 +1,121 @@
+Practice problems for Java Stream API:
+1.  Get the sum of the numbers in a arraylist of integers.
+2.  Get the average of the numbers in an arraylist of integers.
+3.  For a given arraylist of integers square all the numbers, and get the average of the numbers greater than 100.
+4.  For the given arraylist of integers get the numbers starting with 2.(It should also consider the negative values)
+5.  From the given arraylist of integers segregate the even and odd numbers.
+6.  Get the duplicates from given arraylist of integers.
+7.  Get the Max and Min value from given arraylist of integers.
+8.  Sort the numbers in the arraylist of integers (both asc and desc) .
+9.  Get the first 5 numbers from given arraylist of integers.
+10. Skip the first 5 numbers from given arraylist of integers.
+11. Get the 2nd highest number form the given arraylist of integers.
+12. Get the 2nd lowest number form the given arraylist of integers.
+
+
+*****************************************************************************************************
+
+
+String programming questions which can be solved using Streams:-
+Set 1: String concatenation
+1. Concatenate two strings together using streams.
+2. Append a character to an existing string using streams.
+3. Join a list of strings into a single string using streams.
+4. Merge multiple strings with a delimiter using streams.
+5. Concatenate strings conditionally based on a certain criterion using streams.
+
+Set 2: String comparison
+1. Compare two strings lexicographically using streams.
+2. Check if two strings are equal ignoring case using streams.
+3. Determine if a string starts with a specific prefix using streams.
+4. Check if a string ends with a specific suffix using streams.
+5. Compare a portion of two strings using streams.
+
+Set 3: String manipulation
+1. Convert the first character of each word in a string to uppercase using streams.
+2. Reverse the order of words in a string using streams.
+3. Replace all occurrences of a substring in a string using streams.
+4. Remove all whitespace characters from a string using streams.
+5. Remove leading and trailing characters from a string using streams.
+
+Set 4: String length
+1. Calculate the length of a string using streams.
+2. Determine the longest string in a list using streams.
+3. Find the average length of strings in a collection using streams.
+4. Count the number of strings with a specific length in a list using streams.
+5. Identify the shortest and longest strings in a list using streams.
+
+Set 5: Substring extraction
+1. Extract a substring from a string based on a given start and end index using streams.
+2. Retrieve the first n characters from a string using streams.
+3. Get the last n characters from a string using streams.
+4. Extract a substring from a string based on a specific pattern using streams.
+5. Retrieve a substring from a string using a delimiter or regular expression using streams.
+
+Set 6: String searching
+1. Check if a string contains a specific substring using streams.
+2. Find the first occurrence of a character in a string using streams.
+3. Determine the index of the last occurrence of a substring in a string using streams.
+4. Check if a string contains any digit using streams.
+5. Find all occurrences of a substring in a string using streams.
+
+Set 7: String case conversion
+1. Convert a string to uppercase using streams.
+2. Convert a string to lowercase using streams.
+3. Toggle the case of characters in a string using streams.
+4. Capitalize the first character of each word in a string using streams.
+5. Convert a mixed case string to title case using streams.
+
+Set 8: String splitting
+1. Split a string into an array of substrings based on a delimiter using streams.
+2. Split a string into individual characters using streams.
+3. Split a string into words using whitespace as the delimiter using streams.
+4. Extract all numbers from a string by splitting using streams.
+5. Split a string into equal-length substrings using streams.
+
+Set 9: String formatting
+1. Format a string with placeholders and dynamic values using streams.
+2. Format a string as a currency amount with specific decimal places using streams.
+3. Pad a string with leading zeros to a certain length using streams.
+4. Format a date string in a specific format using streams.
+5. Create a formatted table from a list of strings using streams.
+
+Set 10: String parsing
+1. Parse an integer value from a string using streams.
+2. Extract all floating-point numbers from a string using streams.
+3. Parse a date string into a Date object using streams.
+4. Split a string into key-value pairs using a specific delimiter and parse them into a map using streams.
+5. Parse a complex string representation of an object into the corresponding object using streams.
+
+Set 11: Regular expressions and string matching
+1. Check if a string matches a specific regex pattern using streams.
+2. Extract all email addresses from a string using streams and regex.
+3. Validate a phone number format using regex with streams.
+4. Find all URLs in a string using regex and streams.
+5. Replace all occurrences of a pattern in a string using regex and streams.
+
+Set 12: Unicode and character encoding
+1. Convert a Unicode character to its corresponding integer code point using streams.
+2. Convert an integer code point to its corresponding Unicode character using streams.
+3. Determine the number of characters in a string, considering Unicode surrogate pairs using streams.
+4. Convert a string to a specific character encoding using streams.
+5. Validate if a string contains only ASCII characters using streams.
+
+Set 13: String buffering and builders
+1. Append multiple strings together using a StringBuilder and streams.
+2. Reverse a string using a StringBuffer and streams.
+3. Append formatted values to a StringBuilder using streams.
+4. Concatenate a large number of strings efficiently using a StringBuilder and streams.
+5. Perform multiple string manipulations using a StringBuffer and streams.
+
+Set 14: String hashing and encryption
+1. Generate a hash value for a string using MD5 hashing algorithm and streams.
+2. Hash a password string using SHA-256 algorithm and streams.
+3. Encrypt a string using a symmetric encryption algorithm (e.g., AES) and streams.
+4. Decrypt an encrypted string using a symmetric encryption algorithm and streams.
+5. Generate a secure random salt value for password hashing using streams.
+
+Set 15: String I/O operations
+1. Read a string from a text file using streams.
+2. Write a string to a text file using streams.
+3. Serialize and deserialize a string using streams.

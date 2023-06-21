@@ -286,6 +286,7 @@ public class VerifyAnagram {
                 }
             }
 
+
             // Compare the text map with the pattern map
             if (textMap.equals(patternMap)) {
                 result.add(i - patternLength + 1);

@@ -11,7 +11,6 @@ interface WebPage {
     - denoted by FunctionalInterface annotation
     */
 
-
     static void test1() {
     }
 
