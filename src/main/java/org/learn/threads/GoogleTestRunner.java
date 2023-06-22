@@ -1,6 +1,4 @@
-package org.tasks.shoppingcart;
-
-import org.learn.threads.GoogleFeatureThread;
+package org.learn.threads;
 
 public class GoogleTestRunner {
 

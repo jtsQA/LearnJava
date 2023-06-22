@@ -1,6 +1,6 @@
 package org.tasks.shoppingcart;
 
-public class ShoppingCartTest {
+public class ShoppingCart {
 
         /*
         A customer has added below products to basket -

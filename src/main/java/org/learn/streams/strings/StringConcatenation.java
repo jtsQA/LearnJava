@@ -5,16 +5,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class stringConcatenation {
+public class StringConcatenation {
 
-    /*
-    Set 1: String concatenation
-    1. Concatenate two strings together using streams.
-    2. Append a character to an existing string using streams.
-    3. Join a list of strings into a single string using streams.
-    4. Merge multiple strings with a delimiter using streams.
-    5. Concatenate strings conditionally based on a certain criterion using streams.
-    */
+    /**
+     * Set 1: String concatenation
+     * 1. Concatenate two strings together using streams.
+     * 2. Append a character to an existing string using streams.
+     * 3. Join a list of strings into a single string using streams.
+     * 4. Merge multiple strings with a delimiter using streams.
+     * 5. Concatenate strings conditionally based on a certain criterion using streams.
+     */
 
     public static void main(String[] args) {
 

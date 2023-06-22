@@ -2,18 +2,19 @@ package org.learn.streams.strings;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
-public class stringComparison {
+public class StringComparison {
 
-    /*
-    Set 2: String comparison
-    1. Compare two strings lexicographically using streams.
-    2. Check if two strings are equal ignoring case using streams.
-    3. Determine if a string starts with a specific prefix using streams.
-    4. Check if a string ends with a specific suffix using streams.
-    5. Compare a portion of two strings using streams.
-    */
+    /**
+     * Set 2: String comparison
+     * 1. Compare two strings lexicographically using streams.
+     * 2. Check if two strings are equal ignoring case using streams.
+     * 3. Determine if a string starts with a specific prefix using streams.
+     * 4. Check if a string ends with a specific suffix using streams.
+     * 5. Compare a portion of two strings using streams.
+     */
 
     public static void main(String[] args) {
 
@@ -21,6 +22,8 @@ public class stringComparison {
         String str2 = "Selenium";
         String delimiter = ", ";
         char c = '!';
+        int startIndex = 1;
+        int endIndex = 4;
 
         String[] strArray = {"Java", "Selenium", "TestNG", "Maven", "Jenkins"};
         List<String> strList = List.of("Java", "Selenium", "TestNG", "Maven", "Jenkins");
@@ -45,8 +48,9 @@ public class stringComparison {
         endsWithSuffix(str1, "v");
 
 //        5. Compare a portion of two strings using streams.
-        compareSubstring(str1, str2, 0, 3);
-        compareSubstring(str1, str1, 0, 3);
+        System.out.println("\n\nComparison of substrings:");
+        compareSubstring(str1, str2, startIndex, endIndex);
+        compareSubstring(str1, str1, startIndex, endIndex);
 
     }
 
@@ -61,13 +65,13 @@ public class stringComparison {
     }
 
     private static void areStringsEqualIgnoreCase(String str1, String str2) {
-        System.out.printf("\nStrings '%s' and '%s' are equal when ignoring case - ", str1, str2);
+        System.out.printf("\n\nStrings '%s' and '%s' are equal when ignoring case - ", str1, str2);
 
         boolean result1 = Stream.of(str1, str2)
                 .map(String::toLowerCase)
                 .distinct()
                 .count() == 1;
-        System.out.println("Using map, distinct and count in Streams: " + result1);
+        System.out.println("\nUsing map, distinct and count in Streams: " + result1);
 
         boolean result2 = Stream.of(str1, str2)
                 .allMatch(s -> s.equalsIgnoreCase(str1));
@@ -85,13 +89,21 @@ public class stringComparison {
     }
 
     private static void compareSubstring(String str1, String str2, int startIndex, int endIndex) {
-        int count = Stream.of(str1.substring(startIndex, endIndex), str2.substring(startIndex, endIndex))
-                .min(Comparator.naturalOrder())
-                .orElse("")
-                .compareTo(Stream.of(str1.substring(startIndex, endIndex), str2.substring(startIndex, endIndex))
-                        .max(Comparator.naturalOrder())
-                        .orElse(""));
-        System.out.printf("\nCompare substring of '%s' and '%s' using Streams: %d", str1, str2, count);
+        if (startIndex < 0 || endIndex > str1.length() || endIndex > str2.length()) {
+            System.out.println("\nInvalid substring indices for comparing Strings");
+        } else {
+            String substring1 = str1.substring(startIndex, endIndex);
+            String substring2 = str2.substring(startIndex, endIndex);
+
+            int count1 = substring1.compareTo(substring2);
+            System.out.printf("\nCompare substring of '%s' and '%s' using compareTo function: %d", str1, str2, count1);
+
+            int count2 = Optional.of(substring1)
+                    .orElse("")
+                    .compareTo(Optional.of(substring2)
+                            .orElse(""));
+            System.out.printf("\nCompare substring of '%s' and '%s' using Optional: %d", str1, str2, count2);
+        }
     }
 
 }
