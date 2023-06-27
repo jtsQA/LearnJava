@@ -1,4 +1,4 @@
-package org.learn.streams.strings;
+package org.learn.streams.streamsexercises.strings;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

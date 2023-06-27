@@ -1,4 +1,4 @@
-package org.learn.streams;
+package org.learn.streams.functionalinterfaces;
 
 import java.util.function.Supplier;
 
@@ -25,7 +25,7 @@ public class SupplierInterfaceConcept {
     }
 
     public static void getText(Supplier<String> text) {
-        System.out.println("text = " + text.get());
+        System.out.println("\ntext = " + text.get());
         System.out.println("text length = " + text.get().length());
     }
 

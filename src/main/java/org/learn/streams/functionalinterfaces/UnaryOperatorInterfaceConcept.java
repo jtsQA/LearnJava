@@ -1,4 +1,4 @@
-package org.learn.streams;
+package org.learn.streams.functionalinterfaces;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ public class UnaryOperatorInterfaceConcept {
 
         //Function Interface
         Function<Integer, Integer> func2 = x -> x * 3;
-        int result2 = func1.apply(33);
+        int result2 = func2.apply(33);
         System.out.println("func2 = " + result2);
 
         List<String> langList = new ArrayList<String>();

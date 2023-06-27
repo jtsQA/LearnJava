@@ -1,4 +1,4 @@
-package org.learn.streams;
+package org.learn.streams.functionalinterfaces;
 
 import java.util.Arrays;
 import java.util.List;

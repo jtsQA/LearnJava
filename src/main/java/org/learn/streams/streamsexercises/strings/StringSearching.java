@@ -1,4 +1,4 @@
-package org.learn.streams.strings;
+package org.learn.streams.streamsexercises.strings;
 
 import java.util.List;
 import java.util.Optional;

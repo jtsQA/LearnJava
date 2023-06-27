@@ -1,4 +1,4 @@
-package org.learn.streams;
+package org.learn.streams.streamsexercises;
 
 import java.util.*;
 import java.util.stream.IntStream;

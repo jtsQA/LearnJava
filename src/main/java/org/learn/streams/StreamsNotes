@@ -1,0 +1,113 @@
+What is  Streams?
+    Streams in Java are a sequence of elements that can be processed in a declarative and functional way.
+    Streams can handle large datasets by utilizing lazy evaluation and parallel processing.
+
+    Examples of common stream operations:
+        Filter: Allows filtering elements based on a condition.
+        Map: Transforms elements to another type using a mapping function.
+        Reduce: Aggregates elements to a single value using an accumulator function.
+
+    Stream operations can be classified as intermediate and terminal operations.
+        Intermediate operations transform the stream, while terminal operations produce a result or a side effect.
+        Intermediate operations are lazy and do not execute until a terminal operation is encountered, allowing for efficient processing.
+        Intermediate operations - map, filter, sorted
+        Terminal operations - collect, forEach, reduce
+
+     /**
+     * Streams Flowchart:  source --> stream --> filter --> map --> collect --> sink
+     * <p>
+     * source: A source can be a collection, an array or an I/O channel.
+     * filter: The filter method takes a predicate as an argument.
+     * map: The map method takes a function as an argument.
+     * collect: The collect method takes a collector as an argument.
+     * sink: The sink consumes the stream.
+     */
+
+    Important Points/Observations -
+        A stream consists of a source followed by zero or more intermediate methods combined together (pipelined)
+            and a terminal method to process the objects obtained from the source as per the methods described.
+        Stream is used to computing elements as per the pipelined methods without altering the original value of the object.
+
+     Reference Location - src/main/java/org/learn/streams/StreamsConcept.java
+
+
+What is Lambdas and Functional Interface?
+    Lambdas and functional interfaces are two important concepts that are related to streams.
+        Lambdas are anonymous functions that can be used to express computations in a concise way.
+        Functional interfaces are interfaces that have a single abstract method.
+
+    Reference Location -
+    src/main/java/org/learn/streams/LambdaConcept.java
+    src/main/java/org/learn/streams/FunctionInterfaceConcept.java
+
+
+What is lazy loading in the context of Java Streams?
+    Lazy loading is a technique in which the processing of a stream is deferred until it is actually needed.
+    This means that the elements of the stream are not evaluated until they are required by a terminal operation.
+
+
+How does lazy loading differ from eager loading?
+    In eager loading, all of the elements of a stream are evaluated immediately, regardless of whether they are needed or not.
+    This can lead to performance problems, especially when working with large streams.
+    Lazy loading, on the other hand, only evaluates the elements of a stream as they are needed. This can improve performance, especially when working with large or infinite streams.
+
+
+What are the advantages of lazy loading in stream processing?
+    There are several advantages to using lazy loading in stream processing:
+    Performance: Lazy loading can improve performance by avoiding the evaluation of unnecessary elements.
+    Memory: Lazy loading can help to conserve memory by only evaluating the elements of a stream that are actually needed.
+    Scalability: Lazy loading can make streams more scalable by allowing them to be processed in parallel.
+
+
+Explain the concept of lazy evaluation in Java Streams.
+    Lazy evaluation is a technique used in Java Streams to defer the evaluation of intermediate operations until they are needed. This is done by creating a new stream for each intermediate operation. The new stream only contains the elements that are required by the intermediate operation.
+
+
+How does lazy evaluation contribute to performance optimization?
+    Lazy evaluation can contribute to performance optimization by avoiding the evaluation of unnecessary elements.
+    For example, if a stream contains a million elements, but only the first 100 elements are needed, then lazy evaluation can prevent the evaluation of the remaining 900,000 elements.
+
+
+Some examples of lazy evaluation in stream operations:
+    The filter() operation only evaluates the elements of a stream that match a given predicate.
+    The map() operation applies a function to each element of a stream, but the function is not evaluated until the element is actually needed.
+    The limit() operation only evaluates the first n elements of a stream.
+
+
+What are short-circuit operations in Java Streams?
+    Short-circuit operations are operations that can terminate a stream pipeline early.
+    This means that the remaining elements of the stream are not evaluated if the short-circuit operation returns a result.
+
+
+How do short-circuit operations contribute to lazy loading?
+    Short-circuit operations can contribute to lazy loading by preventing the evaluation of unnecessary elements.
+    For example, the findFirst() operation returns the first element of a stream.
+    If the first element is found, then the remaining elements of the stream are not evaluated.
+
+
+Some common short-circuit operations include:
+    findFirst(): Returns the first element of a stream.
+    findAny(): Returns an arbitrary element of a stream.
+    limit(): Only evaluates the first n elements of a stream.
+
+
+Can lazy loading handle infinite streams? Explain.
+    Yes, lazy loading can handle infinite streams. This is because lazy loading only evaluates the elements of a stream as they are needed.
+    For infinite streams, this means that the elements of the stream are never fully evaluated.
+
+
+Discuss scenarios where lazy loading is useful for processing infinite data.
+    Lazy loading is useful for processing infinite data in scenarios where it is not necessary to evaluate all of the elements of the stream.
+    For example, lazy loading can be used to process a stream of financial data that is updated in real time.
+
+
+Provide examples of working with infinite streams using lazy loading.
+    Here is an example of working with an infinite stream using lazy loading:
+        Stream<Integer> infiniteStream = Stream.iterate(1, i -> i + 1);
+        // Only evaluate the first 10 elements of the stream.
+        infiniteStream.limit(10).forEach(System.out::println);
+
+
+How do intermediate operations contribute to lazy loading?
+    Intermediate operations contribute to lazy loading by creating new streams that only contain the elements that are needed by the operation.
+    This means that the elements of the original stream are only evaluated if they are needed

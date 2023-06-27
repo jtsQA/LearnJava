@@ -1,4 +1,4 @@
-package org.learn.streams.streamsshared;
+package org.learn.streams.streamsexercises;
 
 import java.util.HashSet;
 import java.util.List;

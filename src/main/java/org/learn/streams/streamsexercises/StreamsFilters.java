@@ -1,4 +1,4 @@
-package org.learn.streams;
+package org.learn.streams.streamsexercises;
 
 import java.util.Arrays;
 import java.util.List;
@@ -36,7 +36,7 @@ public class StreamsFilters {
 
         //2. filter - did not find any or else
         Customer customer2 = customersList.stream()
-                .filter(x -> x.getName().contains("a") && x.getAge() > 55)
+                .filter(x -> x.getName().contains("a") && x.getAge() >= 55)
                 .findAny()
                 .orElse(null);
         System.out.println("\nCustomer 2: " + customer2);

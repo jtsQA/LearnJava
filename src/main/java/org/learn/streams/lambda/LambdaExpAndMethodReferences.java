@@ -1,4 +1,4 @@
-package org.learn.streams;
+package org.learn.streams.lambda;
 
 import java.util.ArrayList;
 import java.util.List;
