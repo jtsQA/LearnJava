@@ -105,6 +105,7 @@ Discuss scenarios where lazy loading is useful for processing infinite data.
 
 Provide examples of working with infinite streams using lazy loading.
     Here is an example of working with an infinite stream using lazy loading:
+
         Stream<Integer> infiniteStream = Stream.iterate(1, i -> i + 1);
         // Only evaluate the first 10 elements of the stream.
         infiniteStream.limit(10).forEach(System.out::println);
