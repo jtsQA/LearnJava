@@ -1,4 +1,6 @@
-Practice problems for Java Stream API:
+Integer programming questions which can be solved using Stream API:-
+Reference code location - src/main/java/org/learn/streams/streamsexercises/IntArrayList.java
+
 1.  Get the sum of the numbers in a arraylist of integers.
 2.  Get the average of the numbers in an arraylist of integers.
 3.  For a given arraylist of integers square all the numbers, and get the average of the numbers greater than 100.
@@ -16,7 +18,9 @@ Practice problems for Java Stream API:
 *****************************************************************************************************
 
 
-String programming questions which can be solved using Streams:-
+String programming questions which can be solved using Stream API:-
+Reference code location - src/main/java/org/learn/streams/streamsexercises/strings
+
 Set 1: String concatenation
 1. Concatenate two strings together using streams.
 2. Append a character to an existing string using streams.

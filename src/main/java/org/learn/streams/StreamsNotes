@@ -2,6 +2,8 @@ What is  Streams?
     Streams in Java are a sequence of elements that can be processed in a declarative and functional way.
     Streams can handle large datasets by utilizing lazy evaluation and parallel processing.
 
+    Practice Exercises: src/main/java/org/learn/streams/streamsexercises
+
     Examples of common stream operations:
         Filter: Allows filtering elements based on a condition.
         Map: Transforms elements to another type using a mapping function.
@@ -37,8 +39,8 @@ What is Lambdas and Functional Interface?
         Functional interfaces are interfaces that have a single abstract method.
 
     Reference Location -
-    src/main/java/org/learn/streams/LambdaConcept.java
-    src/main/java/org/learn/streams/FunctionInterfaceConcept.java
+    src/main/java/org/learn/streams/lambda
+    src/main/java/org/learn/streams/functionalinterfaces
 
 
 What is lazy loading in the context of Java Streams?
