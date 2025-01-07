@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import org.learn.concepts.EncodeDecode;
@@ -20,7 +21,7 @@ public class ApiRequestPostTest {
         RestAssured.baseURI = "https://gorest.co.in/public/v2";
         String path = "/users";
 
-        User user = new User("adam joan", "male", "adam.joan4@email.com", "active");
+        User user = new User("adam joan", "male", "adam.joan7@email.com", "active");
 
         String token = EncodeDecode.decodeData(FilesHandler.getConfigValue("token"));
 
@@ -54,7 +55,7 @@ public class ApiRequestPostTest {
                 .header("Content-Type", containsString("application/json"))
 
                 // Validate response against schema
-//                .body(matchesJsonSchemaInClasspath(System.getProperty("user.dir") + "src/main/java/org/schemas/response-schema-new-user.json"))
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(System.getProperty("user.dir") + "src/main/java/org/schemas/response-schema-new-user.json"))
                 .extract().response();
 
         // Get response body as a string

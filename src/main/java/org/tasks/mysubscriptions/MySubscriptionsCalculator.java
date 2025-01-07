@@ -10,6 +10,7 @@ public class MySubscriptionsCalculator {
 
     public static void main(String[] args) {
 
+
         Map<String, Double> sums = new LinkedHashMap<>();
 
         Newspapers TOI = new Newspapers();
@@ -23,6 +24,9 @@ public class MySubscriptionsCalculator {
         sums.put("ET", ET.set(4, 4, 4, 4, 4, 4, 10));
         sums.put("BM", BM.set(1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5));
         sums.put("HT", HT.set(2, 2, 2, 2, 2, 4, 4));
+        //sums = {TOI=26.0, Hindu=20.5, ET=34.0, BM=10.5, HT=18.0}
+
+        System.out.println(sums.toString());
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the weekly budget: ");
@@ -45,8 +49,9 @@ class Newspapers {
         price = new LinkedHashMap<>();
     }
 
-    public void setData(String day, double data) {
-        price.put(day, data);
+
+    public void setData(String day, double amount) {
+        price.put(day, amount);
         sum = calcSum();
     }
 
